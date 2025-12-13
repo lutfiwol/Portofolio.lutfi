@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio-Lutfi</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .experience-card {
+      transition: all 0.3s;
+      border-left: 4px solid #667eea;
+    }
+    
+    .experience-card:hover {
+      transform: translateX(8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .smooth-scroll {
+      scroll-behavior: smooth;
+    }
+    
+    .typing-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 40px;
+    }
+    
+    .typing-text {
+      font-family: monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid white;
+      animation: typing 4s steps(60, end) infinite, blink 0.75s step-end infinite;
+      max-width: 95%;
+    }
+    
+    .profile-photo {
+      object-fit: cover;
+      object-position: center 15%;
+    }
+    
+    @media (max-width: 410px) {
+      .typing-text {
+        animation: none;
+        border-right: none;
+        white-space: normal;
+        overflow: visible;
+      }
+    }
+    
+    @keyframes typing {
+      0%, 100% {
+        width: 0;
+      }
+      20%, 80% {
+        width: 100%;
+      }
+    }
+    
+    @keyframes blink {
+      0%, 50% {
+        border-color: white;
+      }
+      51%, 100% {
+        border-color: transparent;
+      }
+    }
+    
+    /* Very small devices */
+    @media (max-width: 410px) {
+      .hero-text {
+        font-size: 1.5rem;
+        padding: 0 0.5rem;
+      }
+      .typing-container {
+        min-height: auto;
+        padding: 0.5rem 1rem;
+      }
+    }
+    
+    /* Mobile devices */
+    @media (min-width: 411px) and (max-width: 640px) {
+      .hero-text {
+        font-size: 2rem;
+      }
+      .typing-text {
+        font-size: 0.9rem;
+      }
+      .typing-container {
+        min-height: 30px;
+      }
+    }
+    
+    /* Tablets */
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .hero-text {
+        font-size: 3rem;
+      }
+      .typing-text {
+        font-size: 1.3rem;
+      }
+    }
+    
+    /* Large screens */
+    @media (min-width: 1025px) {
+      .hero-text {
+        font-size: 3.5rem;
+      }
+      .typing-text {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div id="app" class="w-full h-full overflow-auto smooth-scroll"><!-- Hero Section -->
+   <header class="gradient-bg text-white py-12 md:py-16 lg:py-20 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto text-center">
+     <div class="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 mx-auto mb-4 md:mb-6 bg-white rounded-full overflow-hidden shadow-lg border-4 border-white"><img id="profile_photo" src="https://media.canva.com/v2/image-resize/format:PNG/height:550/quality:100/uri:ifs%3A%2F%2FM%2F56ad3d22-2425-472b-a88d-3f29a95b2116/watermark:F/width:373?csig=AAAAAAAAAAAAAAAAAAAAAPwA7fwFZSzrrGOKYH_n0u2Al3URNqd53ArMXamtINvi&amp;exp=1765605327&amp;osig=AAAAAAAAAAAAAAAAAAAAAO3yEpd-i_4Zh4-blr85Vp85Wgo7xIVb5ZIIyfDz-AUo&amp;signer=media-rpc&amp;x-canva-quality=thumbnail_large" alt="Lutfi Profile Photo" class="w-full h-full profile-photo" onerror="this.src=''; this.alt='Photo unavailable'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-4xl md:text-5xl lg:text-6xl\'>👨‍💼</div>';">
+     </div>
+     <h1 id="name" class="hero-text text-5xl font-bold mb-3 md:mb-4">LUTFI</h1>
+     <div class="mb-6">
+      <div class="typing-container">
+       <p id="subtitle" class="typing-text text-2xl font-semibold">Administrasi|Course Operations|Admin Project</p>
+      </div>
+     </div>
+     <p id="location" class="text-base md:text-lg lg:text-xl mb-2">📍DKI JAKARTA</p>
+    </div>
+   </header><!-- About Section -->
+   <section class="py-8 md:py-12 lg:py-16 px-4 sm:px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+     <h2 id="about_title" class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 lg:mb-8 text-gray-800">Tentang Saya</h2>
+     <div class="bg-gray-50 p-4 md:p-6 lg:p-8 rounded-lg shadow-md">
+      <p id="about_text" class="text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed">Hi.... saya Lutfi, berpengalaman sebagai staf administrasi. Saya terbiasa menangani berbagai pekerjaan administrasi dengan cepat, rapi, dan teliti. Terampil menggunakan Microsoft Excel (Data Cleansing, IF, VLOOKUP, HLOOKUP, Pivot Table), Word, PowerPoint, Google Workspace (Gmail, Sheets, Slides), serta Canva untuk desain presentasi. Saya siap berkontribusi dalam mendukung kelancaran operasional perusahaan Anda.</p>
+     </div>
+    </div>
+   </section><!-- Experience Section -->
+   <section class="py-8 md:py-12 lg:py-16 px-4 sm:px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+     <h2 id="experience_title" class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-10 text-gray-800">Pengalaman Kerja</h2><!-- Experience 1 - PT Bina Bangkit Nusantara -->
+     <div class="experience-card bg-white p-4 md:p-6 rounded-lg shadow-md mb-4 md:mb-6">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3 md:mb-4">
+       <div>
+        <p class="text-base md:text-lg text-purple-600 font-semibold">PT. Bina Bangkit Nusantara</p>
+       </div><span class="text-sm md:text-base text-gray-600 mt-1 md:mt-0">Jan 2025 - May 2025</span>
+      </div><!-- Position A -->
+      <div class="mb-4 md:mb-6">
+       <h3 class="text-base md:text-lg lg:text-xl font-bold text-gray-800 mb-2 md:mb-3">Course Operations</h3>
+       <ul class="list-disc list-inside text-sm md:text-base text-gray-700 space-y-1 md:space-y-2">
+        <li>Perencanaan &amp; Penjadwalan: Mengatur jadwal kelas, kalender akademik, dan ketersediaan fasilitas pendukung pembelajaran</li>
+        <li>Dukungan Pembelajaran: Memberikan bantuan teknis dan administratif kepada instruktur dan peserta selama kursus berlangsung</li>
+        <li>Manajemen Materi: Mengelola dan mengorganisir konten pembelajaran di platform online agar mudah diakses</li>
+        <li>Monitoring Peserta: Memantau kehadiran dan partisipasi peserta, serta memberikan dukungan yang diperlukan</li>
+        <li>Koordinasi Tim lain: Bekerjasama dengan tim akademik, IT, multimedia dan marketing untuk kelancaran operasional kursus</li>
+       </ul>
+      </div><!-- Position B -->
+      <div>
+       <h3 class="text-base md:text-lg lg:text-xl font-bold text-gray-800 mb-2 md:mb-3">Admin Project</h3>
+       <ul class="list-disc list-inside text-sm md:text-base text-gray-700 space-y-1 md:space-y-2">
+        <li>Menyusun susunan acara (rundown) untuk memastikan jalannya acara sesuai dengan perencanaan</li>
+        <li>Melakukan Input Data dan Rekap Data, Menyusun jadwal mengkoordinir persiapan</li>
+        <li>Melakukan koordinasi sub divisi lain dalam menjalankan tugasnya</li>
+       </ul>
+      </div>
+     </div><!-- Experience 2 -->
+     <div class="experience-card bg-white p-4 md:p-6 rounded-lg shadow-md mb-4 md:mb-6">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3 md:mb-4">
+       <div>
+        <h3 class="text-lg md:text-xl lg:text-2xl font-bold text-gray-800">Staf Administrasi</h3>
+        <p class="text-base md:text-lg text-purple-600 font-semibold">PT. Damai Global Perkasa</p>
+       </div><span class="text-sm md:text-base text-gray-600 mt-1 md:mt-0">Sep 2020 - Jan 2023</span>
+      </div>
+      <ul class="list-disc list-inside text-sm md:text-base text-gray-700 space-y-1 md:space-y-2">
+       <li>Membuat surat jalan</li>
+       <li>Membuat invoice</li>
+       <li>Membuat faktur</li>
+       <li>Menginput data customer</li>
+       <li>Mencatat administrasi penjualan harian</li>
+      </ul>
+     </div><!-- Experience 3 -->
+     <div class="experience-card bg-white p-4 md:p-6 rounded-lg shadow-md mb-4 md:mb-6">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3 md:mb-4">
+       <div>
+        <h3 class="text-lg md:text-xl lg:text-2xl font-bold text-gray-800">Staf Administrasi</h3>
+        <p class="text-base md:text-lg text-purple-600 font-semibold">PT. Imperia Asia Indonesia</p>
+       </div><span class="text-sm md:text-base text-gray-600 mt-1 md:mt-0">Oct 2018 - Aug 2020</span>
+      </div>
+      <ul class="list-disc list-inside text-sm md:text-base text-gray-700 space-y-1 md:space-y-2">
+       <li>Membuat surat jalan</li>
+       <li>Membuat invoice</li>
+       <li>Membuat faktur</li>
+       <li>Menginput number tracking</li>
+       <li>Merekap absen karyawan</li>
+       <li>Menginput data customer</li>
+       <li>Memastikan dokumentasi operasional tim terjaga dengan baik dan tertata rapi agar mudah dicari dan tidak hilang</li>
+      </ul>
+     </div>
+    </div>
+   </section><!-- Skills Section -->
+   <section class="py-8 md:py-12 lg:py-16 px-4 sm:px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+     <h2 id="skills_title" class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-10 text-gray-800">Kemampuan</h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"><!-- Card 1: Analisis Data & Administrasi -->
+      <div class="bg-gradient-to-br from-purple-50 to-indigo-50 p-4 md:p-5 lg:p-6 rounded-xl shadow-lg border-2 border-purple-200 hover:shadow-xl transition">
+       <div class="flex items-center mb-3 md:mb-4">
+        <div class="text-2xl md:text-3xl lg:text-4xl mr-2 md:mr-3">
+         📊
+        </div>
+        <h3 class="text-base md:text-lg lg:text-xl font-bold text-purple-800">Analisis Data &amp; Administrasi</h3>
+       </div>
+       <div class="space-y-2 md:space-y-3">
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">Data Cleansing</span> <span class="bg-purple-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">95%</span>
+        </div>
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">Pivot Table</span> <span class="bg-purple-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">95%</span>
+        </div>
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">VLOOKUP/HLOOKUP/IF</span> <span class="bg-purple-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">95%</span>
+        </div>
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">Administration</span> <span class="bg-purple-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">95%</span>
+        </div>
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">Google Workspace</span> <span class="bg-purple-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">90%</span>
+        </div>
+       </div>
+      </div><!-- Card 2: Software & Teknologi Perkantoran -->
+      <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-4 md:p-5 lg:p-6 rounded-xl shadow-lg border-2 border-indigo-200 hover:shadow-xl transition">
+       <div class="flex items-center mb-3 md:mb-4">
+        <div class="text-2xl md:text-3xl lg:text-4xl mr-2 md:mr-3">
+         💻
+        </div>
+        <h3 class="text-base md:text-lg lg:text-xl font-bold text-indigo-800">Software &amp; Teknologi Perkantoran</h3>
+       </div>
+       <div class="space-y-2 md:space-y-3">
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">Microsoft Excel</span> <span class="bg-indigo-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">95%</span>
+        </div>
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">Microsoft Word</span> <span class="bg-indigo-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">90%</span>
+        </div>
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">Microsoft PowerPoint</span> <span class="bg-indigo-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">90%</span>
+        </div>
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">Canva</span> <span class="bg-indigo-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">85%</span>
+        </div>
+       </div>
+      </div><!-- Card 3: Komunikasi & Layanan -->
+      <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-4 md:p-5 lg:p-6 rounded-xl shadow-lg border-2 border-purple-200 hover:shadow-xl transition">
+       <div class="flex items-center mb-3 md:mb-4">
+        <div class="text-2xl md:text-3xl lg:text-4xl mr-2 md:mr-3">
+         💬
+        </div>
+        <h3 class="text-base md:text-lg lg:text-xl font-bold text-purple-800">Komunikasi &amp; Layanan</h3>
+       </div>
+       <div class="space-y-2 md:space-y-3">
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">Customer Service</span> <span class="bg-purple-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">90%</span>
+        </div>
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">Public Speaking</span> <span class="bg-purple-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">80%</span>
+        </div>
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">Presentation Skills</span> <span class="bg-purple-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">85%</span>
+        </div>
+       </div>
+      </div><!-- Card 4: Sifat Kerja -->
+      <div class="bg-gradient-to-br from-indigo-50 to-blue-50 p-4 md:p-5 lg:p-6 rounded-xl shadow-lg border-2 border-indigo-200 hover:shadow-xl transition">
+       <div class="flex items-center mb-3 md:mb-4">
+        <div class="text-2xl md:text-3xl lg:text-4xl mr-2 md:mr-3">
+         🎯
+        </div>
+        <h3 class="text-base md:text-lg lg:text-xl font-bold text-indigo-800">Sifat Kerja</h3>
+       </div>
+       <div class="space-y-2 md:space-y-3">
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">Teamwork</span> <span class="bg-indigo-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">90%</span>
+        </div>
+        <div class="flex justify-between items-center"><span class="text-xs md:text-sm lg:text-base text-gray-700 font-medium">Analytical Thinking</span> <span class="bg-indigo-600 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold">85%</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section class="py-8 md:py-12 lg:py-16 px-4 sm:px-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+     <h2 id="contact_title" class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-10">Hubungi Saya</h2>
+     <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto"><!-- LinkedIn --> <a id="" href="https://www.linkedin.com/in/lutfi-albatawi/" target="_blank" rel="noopener noreferrer" class="bg-white text-purple-600 p-4 md:p-6 rounded-xl font-semibold hover:bg-gray-100 transition shadow-lg flex flex-col items-center justify-center space-y-2">
+       <svg class="w-10 h-10 md:w-12 md:h-12" fill="currentColor" viewbox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+       </svg><span class="text-xs md:text-sm">LinkedIn</span> </a> <!-- Email --> <a id="email_link" href="mailto:lutfiwork98@gmail.com" class="bg-white text-purple-600 p-4 md:p-6 rounded-xl font-semibold hover:bg-gray-100 transition shadow-lg flex flex-col items-center justify-center space-y-2">
+       <svg class="w-10 h-10 md:w-12 md:h-12" fill="currentColor" viewbox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+       </svg><span class="text-xs md:text-sm">Email</span> </a> <!-- Instagram --> <a id="instagram_link" href="https://www.instagram.com/seriuss.inilutfi/" target="_blank" rel="noopener noreferrer" class="bg-white text-purple-600 p-4 md:p-6 rounded-xl font-semibold hover:bg-gray-100 transition shadow-lg flex flex-col items-center justify-center space-y-2">
+       <svg class="w-10 h-10 md:w-12 md:h-12" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+       </svg><span class="text-xs md:text-sm">Instagram</span> </a> <!-- Website --> <a id="website_link" href="#h-full" target="_blank" rel="noopener noreferrer" class="bg-white text-purple-600 p-4 md:p-6 rounded-xl font-semibold hover:bg-gray-100 transition shadow-lg flex flex-col items-center justify-center space-y-2">
+       <svg class="w-10 h-10 md:w-12 md:h-12" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+       </svg><span class="text-xs md:text-sm">Website</span> </a>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="bg-gray-900 text-gray-400 py-8 px-6 text-center">
+    <p>© 2025 I Lutfi</p>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      profile_photo_url: "https://media.canva.com/v2/image-resize/format:PNG/height:550/quality:100/uri:ifs%3A%2F%2FM%2F56ad3d22-2425-472b-a88d-3f29a95b2116/watermark:F/width:373?csig=AAAAAAAAAAAAAAAAAAAAAPwA7fwFZSzrrGOKYH_n0u2Al3URNqd53ArMXamtINvi&exp=1765605327&osig=AAAAAAAAAAAAAAAAAAAAAO3yEpd-i_4Zh4-blr85Vp85Wgo7xIVb5ZIIyfDz-AUo&signer=media-rpc&x-canva-quality=thumbnail_large",
+      name: "LUTFI",
+      subtitle: "STAF ADMINISTRASI | Course Operations | Admin Project Officer",
+      location: "📍 Jakarta Utara, DKI Jakarta",
+      email: "✉️ lutfiwork98@gmail.com",
+      linkedin_url: "https://www.linkedin.com/in/yourprofile",
+      email_contact: "lutfiwork98@gmail.com",
+      instagram_url: "https://www.instagram.com/yourprofile",
+      website_url: "https://yourwebsite.com",
+      about_title: "Tentang Saya",
+      about_text: "Hi.... saya Lutfi, berpengalaman sebagai staf administrasi. Saya terbiasa menangani berbagai pekerjaan administrasi dengan cepat, rapi, dan teliti. Terampil menggunakan Microsoft Excel (Data Cleansing, IF, VLOOKUP, HLOOKUP, Pivot Table), Word, PowerPoint, Google Workspace (Gmail, Sheets, Slides), serta Canva untuk desain presentasi. Saya siap berkontribusi dalam mendukung kelancaran operasional perusahaan Anda.",
+      experience_title: "Pengalaman Kerja",
+      skills_title: "Kemampuan",
+      contact_title: "Hubungi Saya",
+      background_color: "#667eea",
+      surface_color: "#ffffff",
+      text_color: "#1f2937",
+      primary_action_color: "#764ba2",
+      secondary_action_color: "#e0e7ff"
+    };
+
+    async function onConfigChange(config) {
+      const profileImgEl = document.getElementById('profile_photo');
+      const nameEl = document.getElementById('name');
+      const subtitleEl = document.getElementById('subtitle');
+      const locationEl = document.getElementById('location');
+      const emailEl = document.getElementById('email');
+      const aboutTitleEl = document.getElementById('about_title');
+      const aboutTextEl = document.getElementById('about_text');
+      const experienceTitleEl = document.getElementById('experience_title');
+      const skillsTitleEl = document.getElementById('skills_title');
+      const contactTitleEl = document.getElementById('contact_title');
+      const linkedinLinkEl = document.getElementById('linkedin_link');
+      const emailLinkEl = document.getElementById('email_link');
+      const instagramLinkEl = document.getElementById('instagram_link');
+      const websiteLinkEl = document.getElementById('website_link');
+
+      if (profileImgEl) profileImgEl.src = config.profile_photo_url || defaultConfig.profile_photo_url;
+      if (nameEl) nameEl.textContent = config.name || defaultConfig.name;
+      if (subtitleEl) subtitleEl.textContent = config.subtitle || defaultConfig.subtitle;
+      if (locationEl) locationEl.textContent = config.location || defaultConfig.location;
+      if (emailEl) emailEl.textContent = config.email || defaultConfig.email;
+      if (aboutTitleEl) aboutTitleEl.textContent = config.about_title || defaultConfig.about_title;
+      if (aboutTextEl) aboutTextEl.textContent = config.about_text || defaultConfig.about_text;
+      if (experienceTitleEl) experienceTitleEl.textContent = config.experience_title || defaultConfig.experience_title;
+      if (skillsTitleEl) skillsTitleEl.textContent = config.skills_title || defaultConfig.skills_title;
+      if (contactTitleEl) contactTitleEl.textContent = config.contact_title || defaultConfig.contact_title;
+      if (linkedinLinkEl) linkedinLinkEl.href = config.linkedin_url || defaultConfig.linkedin_url;
+      if (emailLinkEl) emailLinkEl.href = `mailto:${config.email_contact || defaultConfig.email_contact}`;
+      if (instagramLinkEl) instagramLinkEl.href = config.instagram_url || defaultConfig.instagram_url;
+      if (websiteLinkEl) websiteLinkEl.href = config.website_url || defaultConfig.website_url;
+
+      // Apply colors
+      const bgColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondaryColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+
+      const headers = document.querySelectorAll('header');
+      headers.forEach(header => {
+        header.style.background = `linear-gradient(135deg, ${bgColor} 0%, ${primaryColor} 100%)`;
+      });
+
+      const sections = document.querySelectorAll('section');
+      sections.forEach((section, index) => {
+        if (index % 2 === 0) {
+          section.style.backgroundColor = surfaceColor;
+        } else {
+          section.style.backgroundColor = '#f9fafb';
+        }
+      });
+
+      const contactSection = document.querySelector('section:last-of-type');
+      if (contactSection) {
+        contactSection.style.background = `linear-gradient(to right, ${bgColor}, ${primaryColor})`;
+      }
+
+      const allText = document.querySelectorAll('h2, h3, p, li, span');
+      allText.forEach(el => {
+        if (!el.closest('header') && !el.closest('footer') && !el.classList.contains('text-purple-600') && !el.classList.contains('text-purple-700')) {
+          el.style.color = textColor;
+        }
+      });
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              config.surface_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ surface_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              config.primary_action_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ primary_action_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              config.secondary_action_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ secondary_action_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["profile_photo_url", config.profile_photo_url || defaultConfig.profile_photo_url],
+        ["name", config.name || defaultConfig.name],
+        ["subtitle", config.subtitle || defaultConfig.subtitle],
+        ["location", config.location || defaultConfig.location],
+        ["email", config.email || defaultConfig.email],
+        ["about_title", config.about_title || defaultConfig.about_title],
+        ["about_text", config.about_text || defaultConfig.about_text],
+        ["experience_title", config.experience_title || defaultConfig.experience_title],
+        ["skills_title", config.skills_title || defaultConfig.skills_title],
+        ["contact_title", config.contact_title || defaultConfig.contact_title],
+        ["linkedin_url", config.linkedin_url || defaultConfig.linkedin_url],
+        ["email_contact", config.email_contact || defaultConfig.email_contact],
+        ["instagram_url", config.instagram_url || defaultConfig.instagram_url],
+        ["website_url", config.website_url || defaultConfig.website_url]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ad1a3f4c4f2dc13',t:'MTc2NTU4ODg0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
